@@ -1,0 +1,387 @@
+set/*ting a reset*/
+*{
+    margin:0;
+    /*removing all the margins that are set by search
+     engines like google chrome,firefox,etc..*/
+     padding:0;
+     text-decoration:none;
+     list-style:none;
+     /*to remove the bullets from the bullet of lists*/
+}
+
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    /*this prevents horizontal scroll*/
+    background-color: rgb(255, 245, 238);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+header.logo_nav{
+
+    /*remove position:fixed; so content scrolls naturally*/
+    position: fixed;
+    padding:1.3rem 5%;
+        /*giving it the padding so to bring the content inward and 
+    prevent it from stucking at the edge of the screen, you should
+    use padding(inner margin)not margins(outer margins)!!or else
+     it might cause some errors*/
+    /*I don't understand the previous part...*/
+    display:flex;
+    top:0;
+    left:0;
+
+    justify-content: space-between;
+    /*the previous two steps were to spread the 
+    content in the screen...
+    but you might still notice that there happens to be
+    no changes ,and the content still didn't spread across 
+    the whole screen.. this's because we still didn't set 
+    the width of header to cover the entire screen (i.e. 100%)*/
+    width:100%;
+    box-sizing: border-box;
+    /*what does this prpoperty do??*/
+    align-items: center;
+    /*notice that now the nav contents (in the header)are 
+    aligned at the middle of the logo,instead of being aligned 
+    at the top of the logo*/
+    background-color: #BC8F8F;
+    z-index: 10000;
+    /*why did we use it*/
+}
+
+img.logo{
+    width: 60px;
+    height:60px;
+}
+
+img.contact_icon{
+    width: 60px;
+    height:60px;
+}
+nav a{
+   color: #F4EDDA;
+    padding-left: 2rem;
+    /*to leave spaces between the links..
+    why didn't we use margins???*/
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #7A4854 ;
+}
+
+
+/*styling the active navigation link*/
+nav a.active{
+    color: #7a4854;
+    font-weight:bold;
+}
+
+#check{
+        display:none;
+    }
+    /*removes the check box */
+.icons{
+    position: absolute;
+    font-size:2.8rem;
+    color: #fff;
+    display: none;
+    right: 10%;
+    cursor: pointer;
+
+}
+
+main.home{
+    position: relative;
+    /*remove fixed position so content scrolls naturally*/
+    top: 0;
+    width: 100%;
+    margin-top: 0;
+    background-color: rgb(255 245 238);
+    margin-top: 75px;
+}
+
+.hero_section{
+    width:100%;
+    position: relative;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, rgb(188 143 143),rgb(255 245 238));
+}
+
+.hero_container{
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    gap: 2rem;
+}
+
+
+.hero_text{
+    flex: 1;
+    min-width: 260px;
+    color: #fefefe;
+}
+
+.hero_text h1{
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.hero_text p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.hero_image {
+    flex: 1;
+    min-width: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_image img{
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow:0 20px 30px rgba(0,0,0,0.3);
+    object-fit: cover;
+    border: 3px solid rgba(255,255,255,0.2);
+}
+
+
+main.my_courses{
+    position: relative;
+    width: 100%;
+    margin-top: 75px;
+    padding-bottom: 0;
+    flex: 1;
+    padding-top: 20px;
+}
+
+main h2{
+    text-align: center;
+    color: #7a4854;
+}
+
+table,th,td {
+    border: 1px, solid, rgb(188,143,143);
+    color: #bc8f8f;
+    
+}
+
+table{
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    height:20rem;
+    background:#7A4854;
+    border-radius: 16px;
+    /*gave the table rounded edges*/
+    overflow: hidden;
+    /*this removed the remaining edges of the original regtangular table border*/
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 0;
+}
+
+table tr:hover{
+    background-color: #F4EDDA;
+}
+
+main.contact_us{
+    position: relative;
+    /*remove fixed position so content scrolls naturally*/
+    top: 0;
+    width: 100%;
+    background-color: rgb(255 245 238);
+    margin-top: 75px;
+    flex:1;
+    padding-top: 20px;
+}
+
+div.phone,div.social{
+    text-align: center;
+}
+main.add_course{
+    position: relative;
+    /*remove fixed position so content scrolls naturally*/
+    top: 0;
+    width: 100%;
+    background-color: rgb(255 245 238);
+    margin-top: 75px;
+    flex:1;
+    color: #7c5f5f;
+    padding-top: 20px;
+}
+
+header.add_courses{
+    text-align: center;
+}
+
+form{
+    color: #fff5ee;
+    padding: 3%;
+    background-color: #bc8f8f;
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    height:20rem;
+    border-radius: 16px;
+    /*gave the table rounded edges*/
+    overflow: hidden;
+    /*this removed the remaining edges of the original regtangular table border*/
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 0;
+}
+label{
+    font-size: 20px;
+}
+input{
+    width: 90%;
+    height: 40px;
+}
+input#N{
+    height: 60px;
+}
+div.button{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+}
+aside{
+    padding: 1%;
+    background-color: #d7b6b6;
+    color: #fff5ee;
+}
+
+header.aside h2{
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.play_store,.apple_store{
+    width: 70px;
+    height: 70px;
+}
+
+footer{
+    position: relative;
+    width:100%;
+    background-color: #bc8f8f;
+    color: #fff5ee;
+    margin-top: 50px;
+    bottom: 0;
+    clear: both;
+}
+
+address{
+    overflow: hidden;
+}
+
+.f_left{
+    float: left;
+}
+
+.right_f{
+    float: right;
+}
+
+.right_f a img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align:middle;
+}
+
+
+@media only screen and (max-width: 800px){
+
+    .icons{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display:none;
+    }
+
+    .icons #close-icon {
+        display:none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display:block;
+    }
+
+    nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        /*is the flex direction by default rows???*/
+        background-color: #7a4854c1;
+        width:100%;
+        height:0;
+        /*what's the difference between 100% & 100vw & fit content???*/
+        
+        /*display: flex;
+        justify-content: center;
+        (why not align-content:center only???)
+        align-items:center;
+        flex-direction: column;
+
+        this was the steps made in the previous video that 
+        didn't fit you because it appeared to use javascript...
+        
+        */
+        overflow: hidden;
+        /*so the navigation links move along with the white navigation background*/
+        transition: .3s ease;
+    }
+
+    #check:checked~nav {
+        height:17.7rem;
+    }
+
+    nav a{
+        display: block;
+        /*so items are no side to side but rather each
+        item occupies a new line*/
+        margin: 1.5rem 0;  
+        /*(why is using padding in this case causes differences ) */ 
+        font-size:1.2em;
+        text-align: center;
+    }
+
+    nav a:hover{
+        background-color: #f4eddaa9;
+    }
+
+    .hero_text h1{
+        font-size: 2rem;
+    }
+    .hero_container{
+        flex-direction: row;
+        text-align: left;
+        padding: 2rem 5%;
+    }
+    .hero_image img{
+        float: right;
+        max-width: 90%;
+    }
+
+
+    
+}
