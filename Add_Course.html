@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html  lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Course Organizer</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    </head>
+    <body>
+        <header class="logo_nav">
+            <img class="logo" src="../images/logo.jpg" alt="LOGO">
+            
+            <input type="checkbox" id="check">
+            <label for="check" class="icons">
+                <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-x' id="close-icon"></i>
+            </label>
+
+            <nav class="header-right">
+                <a href="index.html" >Home</a>
+                <a href="My_Courses.html">My Courses</a>
+                <a href="Add_Course.html" class="active">Add course</a>
+                <a href="Contact_Us.html"><img class="contact_icon" src="../images/contact_icon.png" alt="Contact Us"></a>
+            </nav>
+            
+        </header>
+        <main class="add_course">
+            <header class="add_courses">
+                <h2>Fill in this form pls</h2>
+                <p>(NOTE!!! : a new course will be added with the same information)</p>
+            </header>
+            <form>
+                <label for="CN">Course Name:</label><br>
+                <input type="text" id="CN" name="CN"><br>
+                <label for="I">Instructor:</label><br>
+                <input type="text" id="I" name="I"><br>
+                <label for="CH">Credit Hours:</label><br>
+                <input type="text" id="CH" name="CH"><br>
+                <label for="N">Notes:</label><br>
+                <input type="text" id="N" name="N"><br>
+                <div class="button">
+                <button type="submit">Submit</button>
+                </div>
+            </form>
+        </main>
+        <footer>
+            <h3>Personal Course Organizer</h3>
+            <address>
+                <div class="f_left">
+                    <p class="author">Written By Basmalla Ayman Assaf.<br></p>
+                    <p class="contact">Contact Us: 012345678910</p>
+                </div>
+
+                <div class="right_f">
+                    <p>Follow Us:</p>
+                    <a href="https://share.google/08VZfMkIFkGEZpKng"><img src="../images/facebook.png" alt="Facebook"></a>
+                    <a href="https://share.google/QwixwR7lSdvBLYtcf"><img src="../images/insta.png" alt="Instagram"></a>
+                    <a href="https://share.google/lbvPqlp977PfM6CUU"><img src="../images/Youtube.png" alt="Youtube"></a>
+                </div>
+            </address>
+        </footer>
+    </body>
+</html>
+   
